@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DEEPR Launch Engine</title>
+  <script>
+    async function verifyPayment() {
+      const tx = document.getElementById('tx').value;
+      if (!tx) { alert('Enter transaction hash'); return; }
+      alert('Verification logic will connect to Solana RPC (to be wired).');
+    }
+  </script>
+  <style>
+    body { font-family: Arial; background:#0b0f14; color:white; text-align:center; padding:40px; }
+    input, button { padding:10px; margin:10px; }
+    .box { background:#111827; padding:30px; border-radius:10px; display:inline-block; }
+  </style>
+</head>
+<body>
+  <h1>DEEPR Launch Engine</h1>
+  <div class="box">
+    <p>Generate a full meme coin launch kit.</p>
+    <p><b>Price: 0.05 SOL</b></p>
+    <p>Send SOL to:</p>
+    <p><b id="wallet">YOUR_WALLET_ADDRESS</b></p>
+    <input type="text" id="tx" placeholder="Paste transaction hash">
+    <br>
+    <button onclick="verifyPayment()">Verify & Generate</button>
+  </div>
+</body>
+</html>
